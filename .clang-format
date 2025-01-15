@@ -1,0 +1,45 @@
+# Base Style
+BasedOnStyle: WebKit
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Line Length
+ColumnLimit: 100
+
+# Function Call Wrapping
+BinPackArguments: false          # Do not pack arguments into a single line
+BinPackParameters: false         # Do not pack parameters into a single line
+AlignAfterOpenBracket: AlwaysBreak # Always break after the opening parenthesis
+AllowAllParametersOfDeclarationOnNextLine: false # Do not allow all parameters on the next line
+PenaltyBreakBeforeFirstCallParameter: 1000  # Prevent breaking before the first parameter (default)
+AllowAllArgumentsOnNextLine: false  # Do not allow all arguments on the next line
+
+AllowAllConstructorInitializersOnNextLine: false
+
+# Brace Style
+BreakBeforeBraces: Allman       # Place braces on the next line
+
+# Spaces
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false      # Do not add spaces inside parentheses
+
+# Pointer and Reference Alignment
+PointerAlignment: Left
+ReferenceAlignment: Pointer
+
+# Alignment
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+
+# Other Settings
+KeepEmptyLinesAtTheStartOfBlocks: true
+ReflowComments: true
+MaxEmptyLinesToKeep: 2
+IndentCaseLabels: true
+
+# Template Formatting
+AlwaysBreakTemplateDeclarations: true 
