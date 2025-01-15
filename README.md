@@ -147,8 +147,8 @@ Retrieves the current `JNIEnv` pointer.
 ## Pitfalls I Encountered
 Something I found myself stuck with for a couple of hours was manipulating the jvmtiCapabilities structure itself.
 I was facing weird errors when trying to memset the whole struct to 1, but it turns out that the compiler optimizes
-the struct to single bits, so I was essentially only setting every 8th field to 1 (and corrupting some memory). So I came
-up with this function to set each bit to 1:
+the struct to represent each unsigned int in a bitmask, so I was essentially only setting every 8th field to 1 
+(and corrupting some memory). So I came up with this function to set each bit to 1:
 ```cpp
 void enable_all_capabilities(jvmtiCapabilities* capa)
 {
